@@ -15,9 +15,7 @@ style="width: 40px;"></image>
 </view>
 
 
-<map
-longitude="120.13294"
-latitude="30.21242"
-style="width: 100%;height: 500px;"
-markers="{{marks}}">
-</map>
+<view style="display: flex;flex: 1;">
+<button type="warn" plain="true" bindtap="returnticket">退票</button>
+<button type="warn" plain="true" bindtap="cancelbook">取消预约</button>
+</view>

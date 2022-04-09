@@ -3,11 +3,13 @@
     "pages/index/index",
     "pages/schedule/schedule",
     "pages/user/user",
-    "pages/login/login"
+    "pages/buy/buy",
+    "pages/book/book",
+    "pages/deal/deal"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#48D1CC",
     "navigationBarTitleText": "动物园导航系统",
     "navigationBarTextStyle":"black"
   },

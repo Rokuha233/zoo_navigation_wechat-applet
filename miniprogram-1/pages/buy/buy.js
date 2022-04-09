@@ -1,66 +1,73 @@
 // pages/buy/buy.js
 Page({
 
-    /**
-     * 页面的初始数据
-     */
     data: {
+        userInfo:{},
+        nickName:"",
+        islogin:"",
+        ticket:""
 
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
 
+    onShow(){
+      const islogin=wx.getStorageSync("islogin");      //在本地缓存中获取数据  
+      const nickName=wx.getStorageSync("nickName");
+      this.setData({islogin,nickName});
+        
     },
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
+    buyticket(){
+      var islogin=this.data.islogin;
+      if (islogin==1) {
+        const ticket=wx.getStorageSync("ticket");
+        var ticket0=ticket+1;
+        //var ticket=this.data.ticket+1;
+        //wx.request({
+        //  url: 'url',
+        //  data:{
+        //    ticket:ticket
+        //  }
+        //})
 
+        wx.setStorageSync("ticket",ticket0);
+        wx.showToast({
+          title: '购买成功',
+          icon: 'success',
+          duration: 2000//持续的时间
+        })
+      }
+      else{
+        wx.showModal({
+          title: '提示',
+          content: '请先于个人中心登录！',
+          showCancel: false,
+          success (res) {
+          }
+        })
+
+      }
+      
     },
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    onLoad:function(options){ 
+      var that=this;
+      wx.request({   //向后端发送请求
+        url: 'url',// 后端url
+        data:{    //前端发送给后端的值
+          nickName:that.data.nickName
+        },
+        method:"GET",//请求方式
+        success(res){
+          that.setData({       //从后端获取值
+            ticket:res.ticket
+          });
+        }
+      })
     }
+
+
+   
+
+  
 })

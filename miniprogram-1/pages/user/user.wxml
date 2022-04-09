@@ -20,12 +20,14 @@
     <view class="orders_wrap">
       <view class="orders_title">我的订单</view>
       <view class="order_content">
-        <navigator url="">
-          <view>0</view>
+        <navigator url="/pages/deal/deal">
+          <view wx:if="{{islogin==1}}">{{ticket}}</view>
+          <view wx:else>0</view>
           <view>门票</view>
         </navigator>
-        <navigator url="">
-          <view>0</view>
+        <navigator url="/pages/deal/deal">
+          <view wx:if="{{islogin==1}}">{{book}}</view>
+          <view wx:else>0</view>
           <view>预约</view>
         </navigator>    
       </view>
