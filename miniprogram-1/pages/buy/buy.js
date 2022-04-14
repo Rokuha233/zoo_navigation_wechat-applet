@@ -12,30 +12,19 @@ Page({
 
     onShow(){
       const islogin=wx.getStorageSync("islogin");      //在本地缓存中获取数据  
-      const nickName=wx.getStorageSync("nickName");
-      this.setData({islogin,nickName});
+      this.setData({islogin});
         
     },
 
-    buyticket(){
+    tobuyticket(){
+
       var islogin=this.data.islogin;
       if (islogin==1) {
-        const ticket=wx.getStorageSync("ticket");
-        var ticket0=ticket+1;
-        //var ticket=this.data.ticket+1;
-        //wx.request({
-        //  url: 'url',
-        //  data:{
-        //    ticket:ticket
-        //  }
-        //})
 
-        wx.setStorageSync("ticket",ticket0);
-        wx.showToast({
-          title: '购买成功',
-          icon: 'success',
-          duration: 2000//持续的时间
+        wx.navigateTo({
+          url: '../buytic/buytic',
         })
+
       }
       else{
         wx.showModal({
@@ -47,8 +36,10 @@ Page({
         })
 
       }
-      
+
     },
+
+    
 
     onLoad:function(options){ 
       var that=this;

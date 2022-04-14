@@ -18,14 +18,17 @@
     
 
     <view class="orders_wrap">
-      <view class="orders_title">我的订单</view>
+    <view class="orders_title">
+      <image src="/../../icons/dingdan.png" mode="widthFix" style="width: 25px;"></image>
+      <text>我的订单</text>
+    </view>
       <view class="order_content">
-        <navigator url="/pages/deal/deal">
+        <navigator url="/pages/order/order">
           <view wx:if="{{islogin==1}}">{{ticket}}</view>
           <view wx:else>0</view>
           <view>门票</view>
         </navigator>
-        <navigator url="/pages/deal/deal">
+        <navigator url="/pages/order/order">
           <view wx:if="{{islogin==1}}">{{book}}</view>
           <view wx:else>0</view>
           <view>预约</view>
@@ -36,10 +39,14 @@
 
     <view class="app_info_wrap">
       <view class="app_info_item app_info_contact">
+        <image src="/../../icons/kefu.png" mode="widthFix" style="width: 25px;"></image>
         <text>联系客服</text>
         <text>××××××××××</text>
       </view>
-      <view class="app_info_item">关于我们</view>
+      <view class="app_info_item">
+        <image src="/../../icons/guanyu.png" mode="widthFix" style="width: 25px;"></image>
+      <text>关于我们</text>
+      </view>
     </view>
 
   </view>

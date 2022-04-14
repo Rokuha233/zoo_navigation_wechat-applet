@@ -1,1 +1,10 @@
-/* pages/deal/deal.wxss */
+.deal{
+    display: flex;
+    flex: 1;
+    margin-top: 50rpx;
+    background-color: #fff;
+}
+.view-title{
+    color: green;
+    font-size: 18px;
+}

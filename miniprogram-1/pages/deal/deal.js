@@ -13,15 +13,16 @@ Page({
     onShow(){
         const islogin=wx.getStorageSync("islogin");      //在本地缓存中获取数据    
         const nickName=wx.getStorageSync("nickName");
-        this.setData({islogin,nickName});
+        const ticket=wx.getStorageSync("ticket");
+        const book=wx.getStorageSync("book");
+        this.setData({islogin,nickName,ticket,book});
           
       },
   
-      returnticket(){
+      returnticket(){//退票
         var islogin=this.data.islogin;
+        var ticket=wx.getStorageSync("ticket");
         if (islogin==1) {
-            const ticket=wx.getStorageSync("ticket");
-            //var ticket=this.data.ticket;
             if(ticket!=0){  
                 var ticket0=ticket-1;
                 wx.setStorageSync("ticket",ticket0);
@@ -36,6 +37,13 @@ Page({
                   icon: 'success',
                   duration: 2000//持续的时间
                 })
+            }
+            else {
+              wx.showToast({
+                title: '您还未购票',
+                icon: 'error',
+                duration: 2000//持续的时间
+              })
             }
         }
         else{
@@ -66,6 +74,47 @@ Page({
             });
           }
         })
+      },
+
+      cancelbook(){//取消预约
+        var islogin=this.data.islogin;
+        var book=wx.getStorageSync("book");
+        if (islogin==1) {
+            if(book!=0){  
+                var book0=book-1;
+                wx.setStorageSync("book",book0);
+            //    wx.request({
+            //      url: 'url',
+            //      data:{
+            //        ticket:ticket0
+            //      }
+            //    })
+                wx.showToast({
+                  title: '取消预约成功',
+                  icon: 'success',
+                  duration: 2000//持续的时间
+                })
+            }
+            else{
+              wx.showToast({
+                title: '您还未预约',
+                icon: 'error',
+                duration: 2000//持续的时间
+              })
+            }
+        }
+        else{
+          wx.showModal({
+            title: '提示',
+            content: '请先于个人中心登录！',
+            showCancel: false,
+            success (res) {
+            }
+          })
+  
+        }
+        
+        
       }
 
 })

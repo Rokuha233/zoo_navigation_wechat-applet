@@ -1,14 +1,16 @@
-<view style="display: flex;justify-content: center;">
+<view style="display: flex;justify-content:space-around;">
 
-<navigator url="/pages/buy/buy" style="display: flex;flex-direction: column;">
+<navigator url="/pages/buy/buy" 
+style="display: flex;flex-direction: column;align-items: center;">
 <image mode="widthFix" src="../../icons/ticket.png" 
-style="width: 40px;"></image>
+style="width: 40px;display: flex;"></image>
 <view>购买门票</view>
 </navigator>
 
-<navigator url="/pages/book/book" style="display: flex;flex-direction: column;">
+<navigator url="/pages/book/book"
+style="display: flex;flex-direction: column;align-items: center;">
 <image mode="widthFix" src="../../icons/book.png" 
-style="width: 40px;"></image>
+style="width: 40px;display: flex;"></image>
 <view>预约园区</view>
 </navigator>
 
@@ -19,5 +21,24 @@ style="width: 40px;"></image>
 longitude="120.13294"
 latitude="30.21242"
 style="width: 100%;height: 500px;"
-markers="{{marks}}">
+markers="{{marks}}"
+bindmarkertap="checkdetials">
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">{{locationname}}</view>
+  <view class="modal-content">
+    <view style="display: flex;flex-direction: column;align-items: center;">
+        <image  mode="widthFix" src="{{imagesrc}}" class="modal-image"></image>
+        <view class="modal-intro">{{introduction}}</view>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <button class="btn-cancel" bindtap="onCancel">取消</button>
+    <button class="btn-confirm" bindtap="onConfirm">确定</button>
+  </view>
+</view>
+
+
+
 </map>

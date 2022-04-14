@@ -1,0 +1,33 @@
+.inputid{
+    box-shadow: 0 0 3px #000;
+}
+.font30{
+    font-size: 20px;
+  }
+  
+  .color3{
+    color: #333;
+  }
+  
+  .color6{
+    color: #666;
+    font-size: 18px;
+  }
+  
+  .timeIcon{
+    color:#666;
+    font-size:12px;
+    margin-left: 5rpx;
+  }
+  .view-title{
+    padding-top: 50px;
+    font-size: 20px;
+  }
+  .imagew{
+    width: 180px;
+    padding-top: 50px;
+  }
+  .butt{
+    padding-top: 50px;
+  }
+  

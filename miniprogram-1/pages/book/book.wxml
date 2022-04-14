@@ -1,2 +1,65 @@
-<!--pages/book/book.wxml-->
-<text>pages/book/book.wxml</text>
+<view class='ticket-container'>
+    <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}"
+      scroll-top="{{scrollTop}}">
+      <!--Tab布局-->
+      <view class='title'>
+        <view class="{{0 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='0'>
+          <text>熊山</text>
+          <hr class="line-style"/>
+        </view>
+        
+        <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='1'>
+          <text>大象馆</text>
+          <hr class="line-style"/>
+        </view>
+        <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='2'>
+          <text>猴房</text>
+          <hr class="line-style" />
+        </view>
+      </view>
+ 
+      <!--内容布局-->
+      <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+
+        <swiper-item class='swiper'>
+        <view style="float: left;">
+            <image src="../../image/bear.png" mode="widthFix" style="width: 300px;"></image>
+            <button type="primary" plain="true" bindtap="bookzoo">点击预约园区</button>
+          <view wx:for="{{bear}}" wx:for-item="item" class='record-item'>
+            <view>
+              <view>名称：{{item.name}}</view>
+              <view>介绍：{{item.introduction}}</view>
+            </view>
+          </view>
+        </view>
+        </swiper-item>
+
+        <swiper-item class='swiper'>
+        <view style="float: left;">
+            <image src="../../image/elephant.png" mode="widthFix" style="width: 300px;"></image>
+            <button type="primary" plain="true" bindtap="bookzoo">点击预约园区</button>
+          <view wx:for="{{elephant}}" wx:for-item="item" class='record-item'>
+            <view>
+              <view>名称：{{item.name}}</view>
+              <view>介绍：{{item.introduction}}</view>
+            </view>
+          </view>
+        </view>
+        </swiper-item>
+
+        <swiper-item class='swiper'>
+        <view style="float: left;">
+            <image src="../../image/monkey.png" mode="widthFix" style="width: 300px;"></image>
+            <button type="primary" plain="true" bindtap="bookzoo">点击预约园区</button>
+          <view wx:for="{{monkey}}" wx:for-item="item" class='record-item'>
+            <view>
+              <view>名称：{{item.name}}</view>
+              <view>介绍：{{item.introduction}}</view>
+            </view>
+          </view>
+        </view>
+        </swiper-item>
+
+      </swiper>
+    </scroll-view>
+</view>

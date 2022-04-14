@@ -1,0 +1,23 @@
+<view class="view-title">请填写身份证:</view>
+<input type="idcard" name="idcard" placeholder="身份证" class="inputid" bindinput="inputid"/>
+
+<view class="view-title">请选择日期:</view>
+<picker mode="date" header-text="选择日期"  value="{{date}}" bindchange="bindDateChange">
+  <view class="font30">
+    <text class="timeIcon">▼</text>
+    <text class="color6">{{date}}</text>
+  </view>
+</picker>
+
+<view class="view-title">请选择想要预约的园区:</view>
+<checkbox-group bindchange="HandelItemChange">
+<label wx:for="{{location}}" wx:for-item="item" wx:key="id"> 
+<view>
+<checkbox value="{{item.name}}"> {{item.name}}</checkbox>
+</view>
+</label>
+</checkbox-group>
+
+<view class="butt">
+<button type="primary" bindtap="bookzoo">点击预约</button>
+</view>

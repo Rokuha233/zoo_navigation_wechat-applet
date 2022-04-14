@@ -5,7 +5,12 @@
     "pages/user/user",
     "pages/buy/buy",
     "pages/book/book",
-    "pages/deal/deal"
+    "pages/deal/deal",
+    "pages/buytic/buytic",
+    "pages/bookzoo/bookzoo",
+    "pages/order/order"
+
+
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -27,6 +32,12 @@
       "iconPath": "icons/schedule.png",
       "selectedIconPath": "icons/schedule-s.png"
       },
+      {
+        "pagePath": "pages/deal/deal",
+        "text": "订单",
+        "iconPath": "icons/order.png",
+        "selectedIconPath": "icons/order-s.png"
+        },
       {
         "pagePath": "pages/user/user",
         "text": "个人",

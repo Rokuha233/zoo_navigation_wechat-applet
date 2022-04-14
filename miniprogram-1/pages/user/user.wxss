@@ -58,7 +58,8 @@ page {
   }
   .user_content .user_main .orders_wrap .orders_title {
     padding: 20rpx;
-    border-bottom: 1rpx solid #ccc;
+    border-bottom: 5rpx solid #3CB371;
+    display: flex;
   }
   .user_content .user_main .orders_wrap .order_content {
     display: flex;
@@ -74,16 +75,17 @@ page {
   }
 
   .user_content .user_main .app_info_wrap {
-    margin-top: 30rpx;
+    margin-top: 60rpx;
     background-color: #fff;
   }
   .user_content .user_main .app_info_wrap .app_info_item {
-    padding: 30rpx ;
-    border-bottom: 10rpx solid #ccc;
+    padding: 25rpx ;
+    border-bottom: 8rpx solid#3CB371;
+    display: flex;
+    
   }
   .user_content .user_main .app_info_wrap .app_info_contact {
     display: flex;
-    justify-content: space-between;
   }
 
   

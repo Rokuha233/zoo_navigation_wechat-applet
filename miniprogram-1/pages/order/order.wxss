@@ -56,9 +56,19 @@
    
   .record-item {
     margin-top: 10rpx;
-    background-color:white;
+    background-color: white;
     padding-bottom: 5rpx;
     padding-top: 5rpx;
-    font-size: 18px;
+    font-size: 30rpx;
   }
-
+   
+  .name{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgb(25, 18, 131);
+    padding: 2vh;
+    border-radius: 10rpx;
+    font-size: 15px;
+    
+  }

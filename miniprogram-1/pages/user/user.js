@@ -17,7 +17,8 @@ Page({
           islogin:1
         })
         wx.setStorageSync("islogin", 1);//保存已登录信息
-        wx.setStorageSync("ticket", 0);//   <<保存门票数量（测试用）>>
+        //wx.setStorageSync("ticket", 0);//   <<保存门票数量（测试用）>>
+        //wx.setStorageSync("book", 0);//   <<保存预约数量（测试用）>>
         wx.setStorageSync("nickName", this.data.userInfo.nickName);//保存当前登录用户的名称
 
       }
