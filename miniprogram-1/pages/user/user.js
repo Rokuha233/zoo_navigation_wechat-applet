@@ -28,7 +28,7 @@ Page({
  onLoad:function(options){ 
     var that=this;
     wx.request({   //向后端发送请求
-      url: 'url',// 后端url
+      url: 'http://localhost:8080/Wechat_project_war_exploded/user',// 后端url
       data:{    //前端发送给后端的值
         nickName:that.data.userInfo.nickName
       },

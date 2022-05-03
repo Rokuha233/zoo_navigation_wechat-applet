@@ -20,50 +20,42 @@ Page({
           name:"猴房"
         }
       ],
-      checkedList:[]
+      checkedList:[],
+      numbercheckedList:[]
       },
-
       onShow(){
         const nickName=wx.getStorageSync("nickName");      //在本地缓存中获取数据  
-        this.setData({nickName});
-          
+        this.setData({nickName}); 
       },
-
       bindDateChange: function(e) {
         console.log('picker发送选择改变，携带值为', e.detail.value)
         this.setData({
           date: e.detail.value
         })
       },
-
-
       inputid(e){
         //console.log(e.detail.value);
         this.setData({
             idcard:e.detail.value
         })
-
       },
       HandelItemChange(e){
-        // 1 获取被选中的复选框的值
-        const checkedList = e.detail.value;
-        console.log(e.detail.value);
-        // 2 进行赋值
+        //  获取被选中的复选框的值
+         const checkedList = e.detail.value;
+         console.log(e.detail.value);
+        //  进行赋值
         this.setData({
           checkedList:checkedList
         })
       },
-      
-
       bookzoo(){
           var ticket_id=this.data.ticket_id;
           var book=this.data.book;
           var checkedList=this.data.checkedList;
-
           if(ticket_id!=null){
               var book0=book+1;
               wx.request({   //向后端发送请求
-                url: 'url',// 后端url
+                url: 'http://localhost:8080/Wechat_project_war_exploded/user',// 后端url
                 data:{    //前端发送给后端的值
                   book:book0,
                   checkedList:checkedList

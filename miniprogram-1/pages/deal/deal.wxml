@@ -37,7 +37,4 @@ style="width: 300px;"></image>
 
 
 
-<view class="deal">
-<button type="warn" plain="true" bindtap="returnticket">退票</button>
-<button type="warn" plain="true" bindtap="cancelbook">取消预约</button>
-</view>
+

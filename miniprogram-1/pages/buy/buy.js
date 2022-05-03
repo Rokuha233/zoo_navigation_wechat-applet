@@ -17,14 +17,11 @@ Page({
     },
 
     tobuyticket(){
-
       var islogin=this.data.islogin;
       if (islogin==1) {
-
         wx.navigateTo({
           url: '../buytic/buytic',
         })
-
       }
       else{
         wx.showModal({

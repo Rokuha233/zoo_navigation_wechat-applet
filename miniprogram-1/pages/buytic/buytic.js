@@ -5,14 +5,10 @@ Page({
         nickName:"",
         idcard:"",
         ticket:"",
-        date:'2022-01-01'
+        date:'2022-01-01',
       },
 
-      onShow(){
-        const nickName=wx.getStorageSync("nickName");      //在本地缓存中获取数据  
-        this.setData({nickName});
-          
-      },
+
 
       bindDateChange: function(e) {
         console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -23,7 +19,9 @@ Page({
 
       onShow(){      //在本地缓存中获取数据  
         const nickName=wx.getStorageSync("nickName");
+        
         this.setData({nickName});
+        
           
       },
 
@@ -38,22 +36,29 @@ Page({
       buyticket(){
           var idcard=this.data.idcard;
           var date=this.data.date;
-
+          var nickName=this.data.nickName;
             //const ticket=wx.getStorageSync("ticket");
             const ticket=this.data.ticket;
             var ticket0=ticket+1;
             this.setData({
               ticket:ticket0
             })
-
             wx.request({   //向后端发送请求
-              url: 'url',// 后端url
-              data:{    //前端发送给后端的值
-                ticket:this.data.ticket
+              url: 'http://localhost:8080/Wechat_project_war_exploded/buy',// 后端url
+              data:{
+                idcard,
+                date,
+                nickName
               },
-              method:"GET",//请求方式
-              success(res){
-              
+              header:{
+                'content-type':'application.json/x-www-form-urlencoded;charset=utf-8'
+              },
+              method:"get",//请求方式
+              success:function(res){
+                console.log(res.data);
+              },
+              fail: function(res) {
+                console.log("失败");
               }
             })
     
@@ -62,7 +67,9 @@ Page({
               title: '购买成功',
               icon: 'success',
               duration: 2000//持续的时间
-            })              
+            })       
+            
+            
       },
 
       onLoad:function(options){ 

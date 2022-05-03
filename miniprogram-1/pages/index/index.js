@@ -1,13 +1,9 @@
 Page({
-
-
   data: {
-
   locationname:"",
   introduction:"",
   imagesrc:"",
   showModal: false,
-
    marks:[{
     locationname:"杭州动物园",
     introduction:"杭州动物园，是中国七大动物园之一，动物园位于杭州西湖之南，大慈山的白鹤峰下，园区占地20公顷是一座集野生动物保护、科研、科普、教育和游览于一体的山林式动物园。",
@@ -78,6 +74,9 @@ Page({
   },
   onConfirm: function () {
     this.hideModal();
+  },
+  checkLogin:function(){
+
   }
 
 

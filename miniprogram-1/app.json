@@ -1,52 +1,49 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/schedule/schedule",
-    "pages/user/user",
-    "pages/buy/buy",
-    "pages/book/book",
-    "pages/deal/deal",
-    "pages/buytic/buytic",
-    "pages/bookzoo/bookzoo",
-    "pages/order/order"
-
-
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#48D1CC",
-    "navigationBarTitleText": "动物园导航系统",
-    "navigationBarTextStyle":"black"
-  },
-  "tabBar": {
-    "list": [
-      {
-      "pagePath": "pages/index/index",
-      "text": "地图",
-      "iconPath": "icons/map.png",
-      "selectedIconPath": "icons/map-s.png"
-      },
-      {
-      "pagePath": "pages/schedule/schedule",
-      "text": "行程表",
-      "iconPath": "icons/schedule.png",
-      "selectedIconPath": "icons/schedule-s.png"
-      },
-      {
-        "pagePath": "pages/deal/deal",
-        "text": "订单",
-        "iconPath": "icons/order.png",
-        "selectedIconPath": "icons/order-s.png"
-        },
-      {
-        "pagePath": "pages/user/user",
-        "text": "个人",
-        "iconPath": "icons/person.png",
-        "selectedIconPath": "icons/person-s.png"
-      }
-  ]
-  },
-  
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/schedule/schedule",
+        "pages/user/user",
+        "pages/buy/buy",
+        "pages/book/book",
+        "pages/deal/deal",
+        "pages/buytic/buytic",
+        "pages/bookzoo/bookzoo",
+        "pages/order/order"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#48D1CC",
+        "navigationBarTitleText": "动物园导航系统",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "地图",
+                "iconPath": "icons/map.png",
+                "selectedIconPath": "icons/map-s.png"
+            },
+            {
+                "pagePath": "pages/schedule/schedule",
+                "text": "行程表",
+                "iconPath": "icons/schedule.png",
+                "selectedIconPath": "icons/schedule-s.png"
+            },
+            {
+                "pagePath": "pages/deal/deal",
+                "text": "订单",
+                "iconPath": "icons/order.png",
+                "selectedIconPath": "icons/order-s.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "个人",
+                "iconPath": "icons/person.png",
+                "selectedIconPath": "icons/person-s.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
 }
