@@ -14,15 +14,22 @@ style="width: 40px;display: flex;"></image>
 <view>预约园区</view>
 </navigator>
 
-</view>
+<navigator url="/pages/selbook/selbook"
+style="display: flex;flex-direction: column;align-items: center;">
+<image mode="widthFix" src="../../icons/luxian.png" 
+style="width: 40px;display: flex;"></image>
+<view>行程路线</view>
+</navigator>
 
+</view>
 
 <map
 longitude="120.13294"
 latitude="30.21242"
 style="width: 100%;height: 500px;"
 markers="{{marks}}"
-bindmarkertap="checkdetials">
+bindmarkertap="checkdetials"
+polyline="{{polyline}}">
 
 <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
 <view class="modal-dialog" wx:if="{{showModal}}">
@@ -39,6 +46,8 @@ bindmarkertap="checkdetials">
   </view>
 </view>
 
-
-
 </map>
+
+<view class="releaseBtn" bindtap="gotoRelease">
+  <image class="releaseIcon" src="../../icons/shuaxin.png" />
+</view>

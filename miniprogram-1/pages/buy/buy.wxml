@@ -1,23 +1,31 @@
 <view class="buy_title">购票须知</view>
-<view style="font-size: 18px;font-weight: bold;">动物园票价：成人20元</view>
-<view style="font-size: 18px;font-weight: bold;">优惠政策：</view>
-<view style="font-weight: bold;">1、符合以下任一条件享受免票优惠：</view>
-<view>◆70周岁以上老年人</view>
-<view>◆6周岁（含6周岁）以下儿童</view>
-<view>◆身高1.2米（含1.2米）以下儿童</view>
-<view>◆现役军人、残疾人、省内30年以上教龄的教师、离休干部</view>
-<view style="font-weight: bold;">2、符合以下任一条件享受半票优惠：</view>
-<view>◆6周岁（不含6周岁）-18周岁（含18周岁）未成年人</view>
-<view>◆1.2米（不含1.2米）-1.5米（含1.5米）的未成年人</view>
-<view>◆中国境内全日制大学本科及以下学历在读学生</view>
-<view>◆60-69周岁老年人</view>
-<view style="color:royalblue">
-----------------------------------------------</view>
-<view>请您携带相关证件，方可享受票价优惠。</view>
-<view>优惠政策如有变动，以售票窗口为准。</view>
 
+<image mode="widthFix" src="../../image/1.jpg"></image>
+<view style="font-size: 18px;font-weight: bold;color:#228B22;">动物园票价：成人20元</view>
+<view style="font-size: 18px;font-weight: bold;color:#228B22;">★优惠政策：</view>
+<view style="font-weight: bold;color:#32CD32">1、符合以下任一条件享受免票优惠：</view>
+<text decode="{{true}}">&nbsp;&nbsp;◆70周岁以上老年人
+&nbsp;&nbsp;◆6周岁（含6周岁）以下儿童
+&nbsp;&nbsp;◆身高1.2米（含1.2米）以下儿童
+&nbsp;&nbsp;◆现役军人、残疾人、省内30年以上
+&nbsp;&nbsp;&nbsp;&nbsp;教龄的教师、离休干部
+</text>
 
-    <button type="primary" bindtap="tobuyticket">购买门票</button>
+<view style="font-weight: bold;color:#32CD32">2、符合以下任一条件享受半票优惠：</view>
+<text decode="{{true}}">&nbsp;&nbsp;◆6周岁（不含6周岁）-18周岁（含
+&nbsp;&nbsp;&nbsp;&nbsp;18周岁）未成年人
+&nbsp;&nbsp;◆1.2米（不含1.2米）-1.5米（含1.5
+&nbsp;&nbsp;&nbsp;&nbsp;米）的未成年人
+&nbsp;&nbsp;◆中国境内全日制大学本科及以下学
+&nbsp;&nbsp;&nbsp;&nbsp;历在读学生
+&nbsp;&nbsp;◆60-69周岁老年人
+</text>
+
+<image src="../../image/2.jpg" style="width: 100%;height: 20px;"></image>
+<view class="tips">请您携带相关证件，方可享受票价优惠。</view>
+<view class="tips">优惠政策如有变动，以售票窗口为准。</view>
+
+<button type="primary" bindtap="tobuyticket">购买门票</button>
 
 
     

@@ -1,10 +1,27 @@
 .buy_title{
     text-align: center;
     color: brown;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
+    font-family:fantasy;
 }
 .logintip{
     text-align: center;
     color: crimson;
 }
+.buyborder{
+  
+    
+}
+.graydivide {
+    height: 10px;
+    background-color: #ededed;
+    position:relative;
+    top: 0px;
+  }
+  .tips{
+    text-align: center;
+  } 
+  page {
+    background-color: #F5FFFA;
+  }

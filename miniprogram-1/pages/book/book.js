@@ -79,7 +79,7 @@ Page({
         var islogin=this.data.islogin;
       if (islogin==1) {
         wx.navigateTo({
-          url: '../bookzoo/bookzoo',
+          url: '../seltic/seltic',
         })
       }
       else{

@@ -31,7 +31,7 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "useIsolateContext": true,
+        "useIsolateContext": false,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
@@ -40,13 +40,16 @@
         "minifyWXML": true,
         "showES6CompileOption": false,
         "useCompilerPlugins": false,
-        "ignoreUploadUnusedFiles": true,
-        "useStaticServer": true
+        "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
     "libVersion": "2.23.4",
-    "appid": "wxd5219936074d30e8",
+    "appid": "wx3694c63945e9f8dc",
     "projectname": "miniprogram-1",
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    },
     "condition": {
         "search": {
             "list": []
@@ -66,9 +69,5 @@
         "miniprogram": {
             "list": []
         }
-    },
-    "editorSetting": {
-        "tabIndent": "insertSpaces",
-        "tabSize": 4
     }
 }

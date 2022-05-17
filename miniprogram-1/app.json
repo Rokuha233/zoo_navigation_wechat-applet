@@ -8,7 +8,9 @@
         "pages/deal/deal",
         "pages/buytic/buytic",
         "pages/bookzoo/bookzoo",
-        "pages/order/order"
+        "pages/order/order",
+        "pages/seltic/seltic",
+        "pages/selbook/selbook"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -29,12 +31,6 @@
                 "text": "行程表",
                 "iconPath": "icons/schedule.png",
                 "selectedIconPath": "icons/schedule-s.png"
-            },
-            {
-                "pagePath": "pages/deal/deal",
-                "text": "订单",
-                "iconPath": "icons/order.png",
-                "selectedIconPath": "icons/order-s.png"
             },
             {
                 "pagePath": "pages/user/user",

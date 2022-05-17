@@ -1,2 +1,65 @@
-<!--pages/schedule/schedule.wxml-->
-<text>pages/schedule/schedule.wxml</text>
+<view style="display: flex;justify-content:space-around;background-color:white">
+
+<navigator url="/pages/buy/buy" 
+style="display: flex;flex-direction: column;align-items: center;">
+<image mode="widthFix" src="../../icons/ticket.png" 
+style="width: 40px;display: flex;"></image>
+<view>购买门票</view>
+</navigator>
+
+<navigator url="/pages/book/book"
+style="display: flex;flex-direction: column;align-items: center;">
+<image mode="widthFix" src="../../icons/book.png" 
+style="width: 40px;display: flex;"></image>
+<view>预约园区</view>
+</navigator>
+
+<navigator url="/pages/selbook/selbook"
+style="display: flex;flex-direction: column;align-items: center;">
+<image mode="widthFix" src="../../icons/luxian.png" 
+style="width: 40px;display: flex;"></image>
+<view>行程路线</view>
+</navigator>
+
+</view>
+
+<view class="index_swiper">
+
+    <swiper autoplay indicator-dots circular>
+      <swiper-item wx:for="{{imageList}}">
+          <image mode="widthFix" src="{{item.image_src}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="user_content">
+  
+  <view class="user_main">
+    
+
+    <view class="orders_wrap">
+    <view class="orders_title">
+      <image src="/../../icons/tuijian.png" mode="widthFix" style="width: 25px;"></image>
+      <text>园区攻略路线</text>
+    </view>
+    </view>
+
+
+    <view class="app_info_wrap">
+      <view class="app_info_item app_info_contact">
+      <image src="/../../icons/luxian2.png" mode="widthFix" style="width: 40px;"></image>
+      <text>鸳鸯池,珍禽馆→两栖爬行馆→游禽湖→海豹池,鸟笼→熊山</text>
+      <image src="/../../icons/tuijian2.png" mode="widthFix" style="width: 70px;"></image>
+      </view>
+      <view class="app_info_item">
+      <image src="/../../icons/luxian2.png" mode="widthFix" style="width: 25px;"></image>
+       <text>小动物乐园→虎山,豹笼→狮山→珍贵猴房,猴山</text>
+      </view>
+      <view class="app_info_item">
+      <image src="/../../icons/luxian2.png" mode="widthFix" style="width: 25px;"></image>
+       <text>熊猫馆→长颈鹿馆→大象馆,海狮馆,杂技馆→金鱼馆</text>
+      </view>
+    </view>
+
+  </view>
+</view>

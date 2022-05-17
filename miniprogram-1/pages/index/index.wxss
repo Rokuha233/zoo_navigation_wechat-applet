@@ -94,3 +94,16 @@
     width: 150px;
     height: 100px;
   }
+  .releaseBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+  } 
+    .releaseIcon {
+      width: 50rpx;
+      height: 50rpx;
+      border-radius: 100%;
+      border: solid 1rpx black;
+      padding: 20rpx;
+    }
+

@@ -1,0 +1,81 @@
+.user_info_wrap {
+    height: 40vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .user_info_wrap .user_img_wrap {
+    position: relative;
+  }
+  .user_info_wrap .user_img_wrap .user_bg {
+    height: 50vh;
+    filter: blur(10rpx);
+  }
+  .user_info_wrap .user_img_wrap .user_info {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    text-align: center;
+  }
+  .user_info_wrap .user_img_wrap .user_info .user_icon {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+  }
+  .user_info_wrap .user_img_wrap .user_info .user_name {
+    color: #fff;
+    margin-top: 40rpx;
+  }
+  .user_info_wrap .user_btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
+    font-size: 38rpx;
+    padding: 30rpx;
+    border-radius: 10rpx;
+  }
+  
+  .user_content {
+    position: relative;
+  }
+  .user_content .user_main {
+    padding-bottom: 100rpx;
+    color: #666;
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -40rpx;
+  }
+  
+  .user_content .user_main .orders_wrap {
+    background-color: #fff;
+    margin-top: 80rpx;
+  }
+  .user_content .user_main .orders_wrap .orders_title {
+    padding: 20rpx;
+    border-bottom: 10rpx solid #ee7708;
+    display: flex;
+  }
+  .user_content .user_main .orders_wrap .order_content {
+    display: flex;
+  }
+
+
+  .user_content .user_main .app_info_wrap {
+    margin-top: 10rpx;
+    background-color: #fff;
+  }
+  .user_content .user_main .app_info_wrap .app_info_item {
+    padding: 25rpx ;
+    border-bottom: 2rpx solid#ee7708;
+    display: flex;
+    
+  }
+  .user_content .user_main .app_info_wrap .app_info_contact {
+    display: flex;
+  }
+  page {
+    background-color: 	#FAEBD7
+  }

@@ -24,7 +24,7 @@
         <swiper-item class='swiper'>
         <view style="float: left;">
             <image src="../../image/bear.png" mode="widthFix" style="width: 300px;"></image>
-            <button type="primary" plain="true" bindtap="bookzoo">点击预约园区</button>
+            <button type="primary" plain="true" bindtap="bookzoo">点击前往预约</button>
           <view wx:for="{{bear}}" wx:for-item="item" class='record-item'>
             <view>
               <view>名称：{{item.name}}</view>

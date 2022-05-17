@@ -3,6 +3,8 @@ Page({
   locationname:"",
   introduction:"",
   imagesrc:"",
+  polyline: [],
+  location:[],
   showModal: false,
    marks:[{
     locationname:"杭州动物园",
@@ -77,12 +79,34 @@ Page({
   },
   checkLogin:function(){
 
+  },
+
+  onLoad:function(options){ 
+    
+  },
+
+  onShow(){
+    var pages = getCurrentPages();
+    var currPage = pages[pages.length - 1];
+    //console.log(currPage.__data__.location);//此处既是上一页面传递过来的值
+
+    var that=this;
+    var location=currPage.__data__.location;
+    that.setData({
+      polyline: [{
+        points:location,
+        color: "#FFA500",
+        width: 5,
+        dottedLine: true
+      }],
+    })
+  },
+    gotoRelease:function(){//点击清除路线
+      this.onLoad()
+      this.setData({
+        polyline:null
+      })
   }
 
 
-  
-
-
-
-  
 })

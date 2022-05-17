@@ -14,7 +14,7 @@ Page({
       ticket_id:"",
       book:"",
       book_id:"",
-      date:""
+      date:"",
       //testlist:[{ticket_id:"0",idcard:"111",date:"222"},{ticket_id:"1",idcard:"333",date:"444"}]
       //testlist:[{bookt_id:"0",idcard:"111",date:"222",location:"000"},{ticket_id:"1",idcard:"333",date:"444",location:"000"}]
     },
@@ -59,6 +59,7 @@ Page({
 
       //console.log(e.currentTarget.dataset.idx);
 
+      var that=this;
       wx.request({   //向后端发送请求
         url: 'url',// 后端url
         data:{    //前端发送给后端的值
