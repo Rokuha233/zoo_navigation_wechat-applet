@@ -20,7 +20,7 @@
             <view class='name'>
               <span>预约者身份证：{{item.idcard}}</span>
               <span>日期：{{item.date}}</span>
-              <!--<span>园区：{{item.location}}</span>-->
+              <span>园区：{{item.location}}</span>
               <button size="mini" bindtap="bookLine" data-idx="{{index}}">查看路线</button>
             </view>
           </view>

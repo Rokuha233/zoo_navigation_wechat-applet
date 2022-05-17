@@ -4,7 +4,7 @@ Page({
   introduction:"",
   imagesrc:"",
   polyline: [],
-  location:[],
+  location_e:[],
   showModal: false,
    marks:[{
     locationname:"杭州动物园",
@@ -88,13 +88,13 @@ Page({
   onShow(){
     var pages = getCurrentPages();
     var currPage = pages[pages.length - 1];
-    //console.log(currPage.__data__.location);//此处既是上一页面传递过来的值
+    //console.log(currPage.__data__.location_e);//此处既是上一页面传递过来的值
 
     var that=this;
-    var location=currPage.__data__.location;
+    var location_e=currPage.__data__.location_e;
     that.setData({
       polyline: [{
-        points:location,
+        points:location_e,
         color: "#FFA500",
         width: 5,
         dottedLine: true

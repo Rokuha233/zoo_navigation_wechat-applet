@@ -31,7 +31,6 @@ Page({
       HandelItemChange(e){
         //  获取被选中的复选框的值
          const checkedList = e.detail.value;
-         console.log(e.detail.value);
         //  进行赋值
         this.setData({
           checkedList:checkedList
@@ -41,7 +40,7 @@ Page({
           var ticket_id=this.data.ticket_id;
           var book=this.data.book;
           var checkedList=this.data.checkedList;
-          var location=checkedList.toString();//预约园区字符串
+          var location=JSON.stringify(checkedList) ;//预约园区字符串
 
               var book0=book+1;
               wx.request({   //向后端发送请求

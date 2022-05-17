@@ -11,7 +11,8 @@ Page({
       nickName:"",
       book:"",
       book_id:"",
-      location:[],
+      location:"",//园区名字字符串
+      location_e:[]//每个园区经纬度
      //testlist:[{book_id:"0",idcard:"111",date:"222",location:[
      //        {longitude: 120.131971,latitude: 30.212256},
      //        {longitude: 120.133352,latitude: 30.212731}
@@ -22,6 +23,7 @@ Page({
      //         ]
      //         }
      //         ]
+     //testlist的location仅用于测试，与data的location意义不同
     },
    
     onShow(){
@@ -54,17 +56,31 @@ Page({
         var bookList=this.data.bookList;
 
         var index=e.currentTarget.dataset.idx;
-        var location=bookList[index].location;//选择的园区
-
+        //var location=JSON.parse(bookList[index].location);//选择的园区，将location字符串转数组
+        var location=bookList[index].location;//选择的园区，不转数组
         this.setData({
-            location:location
+          location:location
         });
+
+        var that=this;
+        wx.request({   //向后端发送请求
+          url: 'url',// 后端url
+          data:{    //前端发送给后端的值
+          location:that.data.location   //location字符串进行模糊查询
+          },
+          method:"GET",//请求方式
+          success(res){
+            that.setData({       //从后端获取值
+              location_e:res.location_e   //获得每个园区经纬度
+            });
+          }
+        })
 
         var pages = getCurrentPages();
         var prevPage = pages[pages.length - 2];//上一个页面
         //直接调用上一个页面的setData()方法，把数据存到上一个页面中去
         prevPage.setData({
-          location:location
+          location_e:location_e
         }),
         //console.log(location);
     
